@@ -1,0 +1,27 @@
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.roomForm {
+  margin-top: 40%;
+}
+
+.chat {
+  width: 60%;
+  height: 80%;
+  margin: auto;
+}
+
+li{
+  list-style-type: none; 
+
+}
+
+.ownMessage{
+  color: red;
+  text-align: right;
+}
