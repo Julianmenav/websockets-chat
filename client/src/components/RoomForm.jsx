@@ -11,6 +11,7 @@ const RoomForm = ({ joinRoom }) => {
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
+      if (room === "" || name === "") return;
       joinRoom(room, name);
     }
   };
