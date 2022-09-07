@@ -18,7 +18,7 @@ const Chat = ({ room, name }) => {
 
     //Listener that we only want to active once.
     socket.on("receive_message", (data) => {
-      setMessageList((prev) => [...prev, data]);
+      setMessageList((prev) => [data, ...prev]);
     });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -28,7 +28,7 @@ const Chat = ({ room, name }) => {
     const objMessage = { id: socket.id, msg: message, room: room, name: name };
 
     socket.emit("send_message", objMessage);
-    setMessageList((prev) => [...prev, objMessage]);
+    setMessageList((prev) => [objMessage, ...prev]);
     setMessage("");
   };
 

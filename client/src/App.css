@@ -7,21 +7,39 @@
 }
 
 .roomForm {
-  margin-top: 40%;
-}
-
-.chat {
-  width: 60%;
-  height: 80%;
   margin: auto;
 }
 
-li{
-  list-style-type: none; 
+.chat {
+  width: 22em;
+  height: 30em;
+  margin: 10px;
+}
+
+.messages {
+  height: 20em;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  border: 1px solid black;
+}
+
+.message{
+  color: gray;
+}
+
+.message > div > p {
+  margin: 0;
+}
+
+.messageAuthor {
+  font-size: 0.6em;
 
 }
 
+
 .ownMessage{
-  color: red;
+  color: green;
   text-align: right;
 }
