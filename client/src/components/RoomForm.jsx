@@ -10,12 +10,6 @@ const RoomForm = () => {
     navigate(`chat?room=${room}`, { state: { name: name } });
   };
 
-  const handleKeyDown = (event) => {
-    if (event.key === "Enter") {
-      joinRoom();
-    }
-  };
-
   return (
     <div className="roomForm">
       <form onSubmit={joinRoom}>
@@ -30,13 +24,12 @@ const RoomForm = () => {
         <div className="roomInput">
           <input
             className="roomInput"
-            onKeyDown={handleKeyDown}
             onChange={(event) => setRoom(event.target.value)}
             placeholder="Enter room"
             required="required"
-            pattern="[0-9]{1,20}"
+            pattern="[0-9]{1,4}"
           />
-          <input type="submit" className="joinRoomButton" />
+          <input type="submit" className="joinRoomButton" value="Join"/>
         </div>
       </form>
     </div>
