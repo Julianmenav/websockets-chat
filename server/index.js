@@ -25,12 +25,12 @@ io.on("connection", (socket) => {
   //Enter room
   socket.on("join_room", (data) => {
     socket.join(data);
-    console.log(`Usuario unido a sala ${data}`)
+    console.log(`User ${socket.id} joined room ${data}`)
   });
 
   //When a message is sent by an user:
   socket.on("send_message", (data) => {
-    console.log(`${socket.id} has sent a message.`);
+    console.log(`${socket.id} has sent a message in room ${data.room}.`);
     socket.to(data.room).emit("receive_message", data);
   });
 
