@@ -43,3 +43,9 @@
   color: green;
   text-align: right;
 }
+
+.joinRoomText{
+  color: rgb(0, 71, 0);
+  text-align: center;
+  font-size: 18px
+}

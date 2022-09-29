@@ -19,12 +19,21 @@ const Chat = () => {
   //Join Room and listen once for messages.
   useEffect(() => {
     console.log(`Entrando en la sala ${room}`);
-    socket.emit("join_room", room);
+    const joinText = `${name} joined the room.`
+    const joinTextId = "joinRoomTextId"
+    const data = { id: joinTextId, msg: joinText, room: room, name: name }
+    socket.emit("join_room", data);
     
     //Listener that we only want to active once.
     socket.on("receive_message", (data) => {
       setMessageList((prev) => [data, ...prev]);
     });
+
+    socket.on("user_joined", (data) => {
+      setMessageList((prev) => [data, ...prev]);
+    })
+
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   

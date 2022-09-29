@@ -6,10 +6,16 @@ const ChatLog = ({ messageList, id }) => {
   const isFirstMessage = (msg, idx, msgArray) =>
     msgArray[idx + 1] === undefined || msg.id !== msgArray[idx + 1]["id"];
 
+  const isJoinRoomText = (msg) => msg.id === "joinRoomTextId";
+
   return (
     <div className="messages">
       {messageList.map((msg, idx, arr) => {
-        return (
+        return isJoinRoomText(msg) ? (
+          <div className="joinRoomText" key={idx}>
+            <p>{msg.msg}</p>
+          </div>
+        ) : (
           <div
             className={`message ${msg.id === id ? "ownMessage" : null}`}
             key={idx}
