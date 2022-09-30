@@ -22,7 +22,7 @@ const RoomForm = () => {
             onChange={(event) => setName(event.target.value)}
             placeholder="Enter your name"
             required="required"
-            pattern="[A-Za-z0-9]{1,20}"
+            pattern="[A-Za-z0-9]{1,10}[\s_-]?[A-Za-z0-9]{1,10}"
           />
           <input
             className="input"
