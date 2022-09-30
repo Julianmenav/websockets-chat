@@ -11,26 +11,28 @@ const RoomForm = () => {
   };
 
   return (
-    <div className="roomForm">
-      <form onSubmit={joinRoom}>
-        <div className="nameInput">
+    <div className="roomFormComponent">
+      <div className="roomFormHeader"> 
+        <p>Join a Room</p>
+      </div>
+      <form className="roomForm" onSubmit={joinRoom}>
+        <div id="inputs" >
           <input
+            className="input"
             onChange={(event) => setName(event.target.value)}
-            placeholder="Enter name"
+            placeholder="Enter your name"
             required="required"
             pattern="[A-Za-z0-9]{1,20}"
           />
-        </div>
-        <div className="roomInput">
           <input
-            className="roomInput"
+            className="input"
             onChange={(event) => setRoom(event.target.value)}
-            placeholder="Enter room"
+            placeholder="Enter a room number"
             required="required"
             pattern="[0-9]{1,4}"
           />
-          <input type="submit" className="joinRoomButton" value="Join"/>
         </div>
+        <input type="submit" className="joinRoomButton" value="Join"/>
       </form>
     </div>
   );

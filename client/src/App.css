@@ -1,13 +1,69 @@
+* {
+  margin: 0;
+}
 
 .App {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
+  background: linear-gradient(35deg, rgba(69,218,109,1) 0%, rgba(62,195,226,1) 100%);
+}
+
+.roomFormComponent {
+  font-size: 20px;
+  margin: auto;
+  width: 18em;
+  height: 18em;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.74);
+}
+
+.roomFormHeader {
+  display: flex;
+  justify-content: center;
+  height: 25%;
+  font-size: 1.8em;
+}
+
+.roomFormHeader > p {
+  color: rgb(143, 143, 143);
+  font-weight: bold;
+}
+
+.roomFormHeader p {
+  margin-top: 1em;
 }
 
 .roomForm {
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 75%;
+}
+
+#inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  border: none;
+  font-size: 0.8em;
+  margin-top: 0.6em;
+  padding: 0.5em;
+}
+
+.joinRoomButton{
+  color: #fff;
+  background: linear-gradient(35deg, rgb(12, 181, 219) 0%, rgb(13, 207, 65) 99%);
+  border: none;
+  border-radius: 6px;
+  padding: 0 2em 0.1em 2em;
+  font-size: 1.5em;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .chat {
@@ -35,9 +91,7 @@
 
 .messageAuthor {
   font-size: 0.6em;
-
 }
-
 
 .ownMessage{
   color: green;
@@ -49,3 +103,5 @@
   text-align: center;
   font-size: 18px
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Rubik&display=swap');
