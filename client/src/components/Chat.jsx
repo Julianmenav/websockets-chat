@@ -56,7 +56,7 @@ const Chat = () => {
     <div className="chat">
       <div className="roomNumber">{`Room: ${room}`}</div>
       <ChatLog messageList={messageList} id={socket.id} />
-      <div>
+      <div id="sendMessageFooter">
         <input
           className="inputMessage"
           onKeyDown={handleKeyDown}

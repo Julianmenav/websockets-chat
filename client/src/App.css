@@ -67,13 +67,14 @@
 }
 
 .chat {
-  width: 22em;
+  margin: auto;
+  width: 26em;
   height: 30em;
-  margin: 10px;
 }
 
-.messages {
-  height: 20em;
+.messages {  
+  background-color: rgba(255, 255, 255, 0.74); 
+  height: 95%;
   width: 100%;
   overflow: auto;
   display: flex;
@@ -82,26 +83,39 @@
 }
 
 .message{
-  color: gray;
+  color: white;
+  font-size: 1.3em;
+  margin: 0.3em;
 }
 
-.message > div > p {
-  margin: 0;
+.messageContent {
+  max-width: 60%;
 }
 
-.messageAuthor {
-  font-size: 0.6em;
+.messageAuthor > p{
+  font-size: 0.5em;
+  color: rgb(39, 39, 39);
 }
 
-.ownMessage{
-  color: green;
-  text-align: right;
+.messageContent > p {
+  background-color: gray;
+  border-radius: 10px;
+  padding: 0 0.5em 0.2em 0.5em;
+}
+
+.ownMessage {
+  display: flex;
+  justify-content: right;
+}
+
+.ownMessage > .messageContent > p  {
+  background-color: green;
 }
 
 .joinRoomText{
-  color: rgb(0, 71, 0);
+  color: rgb(112, 112, 112);
+  font-size: 0.8em;
   text-align: center;
-  font-size: 18px
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Rubik&display=swap');
