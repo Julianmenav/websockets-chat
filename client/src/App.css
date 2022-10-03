@@ -89,7 +89,7 @@
 }
 
 .messageContent {
-  max-width: 60%;
+  max-width: fit-content;
 }
 
 .messageAuthor > p{
