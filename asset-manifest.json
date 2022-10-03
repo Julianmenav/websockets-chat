@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/websockets-chat/static/css/main.2822721e.css",
-    "main.js": "/websockets-chat/static/js/main.306934fc.js",
+    "main.css": "/websockets-chat/static/css/main.6e13c278.css",
+    "main.js": "/websockets-chat/static/js/main.0fe79c5e.js",
     "index.html": "/websockets-chat/index.html",
-    "main.2822721e.css.map": "/websockets-chat/static/css/main.2822721e.css.map",
-    "main.306934fc.js.map": "/websockets-chat/static/js/main.306934fc.js.map"
+    "main.6e13c278.css.map": "/websockets-chat/static/css/main.6e13c278.css.map",
+    "main.0fe79c5e.js.map": "/websockets-chat/static/js/main.0fe79c5e.js.map"
   },
   "entrypoints": [
-    "static/css/main.2822721e.css",
-    "static/js/main.306934fc.js"
+    "static/css/main.6e13c278.css",
+    "static/js/main.0fe79c5e.js"
   ]
 }
