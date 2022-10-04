@@ -13,7 +13,7 @@ const ChatLog = ({ messageList, id }) => {
       {messageList.map((msg, idx, arr) => {
         return isJoinRoomText(msg) ? (
           <div className="joinRoomText" key={idx}>
-            <p>{msg.msg}</p>
+            <span>{msg.msg}</span>
           </div>
         ) : (
           <div
@@ -22,11 +22,11 @@ const ChatLog = ({ messageList, id }) => {
           >
             {!isOwnMessage(msg) && isFirstMessage(msg, idx, arr) ? (
               <div className="messageAuthor">
-                <p>{msg.name}</p>
+                <span>{msg.name}</span>
               </div>
             ) : null}
             <div className="messageContent">
-              <p>{msg.msg}</p>
+              <span>{msg.msg}</span>
             </div>
           </div>
         );

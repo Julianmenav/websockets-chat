@@ -27,12 +27,12 @@
   font-size: 1.8em;
 }
 
-.roomFormHeader > p {
+.roomFormHeader > span {
   color: rgb(112, 112, 112);
   font-weight: bold;
 }
 
-.roomFormHeader p {
+.roomFormHeader span{
   margin-top: 1em;
 }
 
@@ -89,15 +89,16 @@
 }
 
 .messageContent {
-  max-width: fit-content;
+  width: fit-content;
+  max-width: 60%;
 }
 
-.messageAuthor > p{
+.messageAuthor > span{
   font-size: 0.5em;
   color: rgb(39, 39, 39);
 }
 
-.messageContent > p {
+.messageContent {
   background-color: gray;
   border-radius: 10px;
   padding: 0 0.5em 0.2em 0.5em;
@@ -108,7 +109,7 @@
   justify-content: right;
 }
 
-.ownMessage > .messageContent > p  {
+.ownMessage > .messageContent {
   background-color: green;
 }
 
@@ -116,6 +117,10 @@
   color: rgb(112, 112, 112);
   font-size: 0.8em;
   text-align: center;
+}
+
+span {
+  overflow-wrap: break-word;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Rubik&display=swap');
