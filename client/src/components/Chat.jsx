@@ -23,7 +23,7 @@ const Chat = () => {
     const joinTextId = "joinRoomTextId"
     const data = { id: joinTextId, msg: joinText, room: room, name: name }
     socket.emit("join_room", data);
-    
+
     //Listener that we only want to active once.
     socket.on("receive_message", (data) => {
       setMessageList((prev) => [data, ...prev]);
@@ -36,9 +36,11 @@ const Chat = () => {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  
+
   const sendMessage = () => {
-    if (message === "") return;
+    const emptyOrWhiteSpaceRegex = /^(?![\s\S])|^( {1,})$/;
+    
+    if (emptyOrWhiteSpaceRegex.test(message)) return;
     const objMessage = { id: socket.id, msg: message, room: room, name: name };
 
     socket.emit("send_message", objMessage);
