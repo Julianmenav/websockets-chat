@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 .App {
@@ -8,6 +9,7 @@
   display: flex;
   justify-content: center;
   background: linear-gradient(35deg, rgba(69,218,109,1) 0%, rgba(62,195,226,1) 100%);
+  background-repeat: repeat;
 }
 
 .roomFormComponent {
@@ -101,13 +103,9 @@
   padding: 0 0.5em 0.2em 0.5em;
 }
 
-.ownMessage {
-  display: flex;
-  justify-content: right;
-}
-
 .ownMessage > .messageContent {
   background-color: green;
+  margin-left: auto;
 }
 
 .joinRoomText{
