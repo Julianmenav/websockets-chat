@@ -65,20 +65,32 @@
   font-family: 'Noto Sans JP', sans-serif;
 }
 
+.roomNumber{
+  padding: 10px;
+  background-color: #242424;
+  border-bottom:thin solid rgba(255, 255, 255, 0.74) ;
+  color: #fff;
+}
+
 .chat {
   margin: auto;
   width: 26em;
   height: 30em;
+  background-color: rgb(25, 26, 27); 
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .messages {  
-  background-color: rgba(255, 255, 255, 0.74); 
-  height: 95%;
+  flex-grow: 1;
+  justify-self: stretch;
   width: 100%;
   overflow: auto;
   display: flex;
   flex-direction: column-reverse;
-  border: 1px solid black;
+
 }
 
 .message{
@@ -98,13 +110,13 @@
 }
 
 .messageContent {
-  background-color: gray;
+  background-color: rgb(117, 172, 223);
   border-radius: 10px;
   padding: 0 0.5em 0.2em 0.5em;
 }
 
 .ownMessage > .messageContent {
-  background-color: green;
+  background-color: rgb(53, 212, 125);
   margin-left: auto;
 }
 
@@ -117,5 +129,45 @@
 span {
   overflow-wrap: break-word;
 }
+
+#separationLine {
+  width: 95%;
+  height: 1px;
+  background-color: #242424;
+  margin: auto;
+}
+
+#sendMessageFooter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1d1e22;
+  padding: 10px;
+  border-radius: 40px;
+  margin: 10px;
+}
+
+.inputMessage {
+  flex-grow: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
+.inputMessage:focus {
+  outline: none;
+}
+
+.sendMessageButton {
+  font-size: 2em;
+  color: rgb(107, 228, 107);
+  display: flex;
+  align-items: center;
+}
+
+
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Rubik&display=swap');
