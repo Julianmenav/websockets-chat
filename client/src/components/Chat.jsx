@@ -4,7 +4,7 @@ import { io } from "socket.io-client";
 import ChatInput from "./ChatInput";
 import ChatLog from "./ChatLog";
 
-const serverURL = process.env.REACT_APP_SERVER_URL;
+const serverURL = import.meta.env.VITE_SERVER_URL;
 const socket = io.connect(serverURL);
 
 const Chat = () => {
