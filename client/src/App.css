@@ -14,57 +14,97 @@
   background-repeat: repeat;
 }
 
-.roomFormComponent {
-  font-size: 20px;
+.roomFormComponent{
+  background-color: rgba(25, 26, 27, 0.986); 
   margin: auto;
-  width: 18em;
-  height: 18em;
-  border-radius: 15px;
-  overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.74);
+  width: 22em;
+  height: 23em;
+  color: #fff;
+  border-radius: 9px;
+  box-shadow: 2px 2px 3px 1px #000;
+  display: flex;
+  flex-direction: column;
 }
 
 .roomFormHeader {
-  display: flex;
-  justify-content: center;
-  height: 25%;
-  font-size: 1.8em;
+  height: 33%;
+  display: grid;
+  place-content: center;
 }
 
 .roomFormHeader > p {
-  color: rgb(112, 112, 112);
-  font-weight: bold;
-  margin-top: 1em;
+  font-size: 2.4em;
+  font-weight:  700;
+
+}
+
+.roomFormHeader img {
+  width: 40px;
+  margin-left: 6px;
+  transform: translatey(25%);
 }
 
 .roomForm {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 75%;
+  align-items: flex-end;
 }
 
 #inputs {
   display: flex;
+  width: 70%;
   flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 0 auto;
 }
 
-.input {
-  border: none;
+label {
   font-size: 0.8em;
-  margin-top: 0.6em;
-  padding: 0.5em;
 }
 
-.joinRoomButton{
-  color: #fff;
-  background: linear-gradient(35deg, rgb(12, 181, 219) 0%, rgb(13, 207, 65) 99%);
+.input{
+  font-size: 1.9em;
+  font-family: monospace;
+  margin-bottom: 20px;
+  padding: 8px 13px;
+  border-radius: 3px;
   border: none;
-  border-radius: 6px;
-  padding: 0 2em 0.1em 2em;
+  background-color: rgba(187, 187, 187, 0.151);
+  color: #00e200;
+  font-weight: bold;
+}
+
+.input::placeholder {
+  opacity: 0.6;
+}
+
+#inputs > * {
+  width: 100%;
+}
+
+.joinRoomButton {
+  margin-top: 0.4em;
   font-size: 1.5em;
-  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0 auto;
+  margin-top: 0.4em;
+  border: none;
+  padding: 6px 25px;
+  border-radius: 3px;
+  font-weight: bold;
+  background-color: #11b811;
+  color: #fff;
+  box-shadow: 0 5px #078f07;
+}
+
+.joinRoomButton:hover {
+  background-color: #03E304;
+}
+
+.joinRoomButton:active {
+  transform: translatey(2px);
+  box-shadow: 0 3px #078f07;
 }
 
 .roomNumber{
