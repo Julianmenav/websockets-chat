@@ -29,6 +29,7 @@ const RoomForm = () => {
           />
           <label for="room" >Room Number</label>
           <input
+            type="tel"
             id="room"
             className="input"
             onChange={(event) => setRoom(event.target.value)}
