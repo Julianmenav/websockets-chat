@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useSearchParams } from "react-router-dom";
 import { io } from "socket.io-client";
-import ChatInput from "./ChatInput";
-import ChatLog from "./ChatLog";
+import ChatInput from "../../components/ChatInput";
+import ChatLog from "../../components/ChatLog";
 
 const serverURL = import.meta.env.VITE_SERVER_URL;
 const socket = io.connect(serverURL);

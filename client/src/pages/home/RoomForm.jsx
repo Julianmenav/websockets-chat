@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import chatIcon from "../assets/favicon.svg";
+import chatIcon from "/favicon.svg";
 
 const RoomForm = () => {
   const [room, setRoom] = useState("");
@@ -8,7 +8,7 @@ const RoomForm = () => {
 
   const navigate = useNavigate();
   const joinRoom = () => {
-    navigate(`chat?room=${room}`, { state: { name: name } });
+    navigate(`/chat?room=${room}`, { state: { name: name } });
   };
 
   return (
@@ -18,7 +18,7 @@ const RoomForm = () => {
       </div>
       <form className="roomForm" onSubmit={joinRoom}>
         <div id="inputs" >
-          <label for="name" >Name</label>
+          <label htmlFor="name" >Name</label>
           <input
             id="name"
             className="input"
@@ -27,7 +27,7 @@ const RoomForm = () => {
             required="required"
             pattern="[A-Za-z0-9]{1,10}[\s_-]?[A-Za-z0-9]{1,10}"
           />
-          <label for="room" >Room Number</label>
+          <label htmlFor="room" >Room Number</label>
           <input
             type="tel"
             id="room"
