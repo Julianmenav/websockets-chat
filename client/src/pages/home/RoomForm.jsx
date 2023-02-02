@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import RoomCard from "../../components/RoomCard";
+import UserCard from "../../components/UserCard";
 import useAuth from "../../hooks/useAuth";
-import chatIcon from "/favicon.svg";
 
 const RoomForm = () => {
   const [user, loading] = useAuth();
-  const [room, setRoom] = useState("");
   const [name, setName] = useState("");
   const navigate = useNavigate();
   const { state } = useLocation();
@@ -28,37 +28,25 @@ const RoomForm = () => {
     return navigate("/");
   };
 
-  const joinRoom = () => {
-    navigate(`/chat?room=${room}`, { state: { name: name } });
+  const joinRoom = (roomNumber) => {
+    // console.log(roomNumber)
+    navigate(`/chat?room=${roomNumber}`, { state: { name: name } });
   };
 
   const htmlContent = (
-    <>
-      {user && (
-        <div className="rounded-md border border-black mt-12 bg-white text-center font-bold w-fit px-5 py-2 text-red-600">
-          <button onClick={logout}>LOGOUT</button>
-        </div>
-      )}
-      <div className="roomFormComponent">
-        <div className="roomFormHeader">
-          <p>
-            Join a Room{" "}
-            <span>
-              <img src={chatIcon} alt=""></img>
-            </span>
-          </p>
-        </div>
-        <form className="roomForm" onSubmit={joinRoom}>
-          <div id="inputs">
-            <label htmlFor="name">Name</label>
-            <input id="name" className="input" onChange={(event) => setName(event.target.value)} value={name} required="required" pattern="[A-Za-z0-9]{1,10}[\s_-]?[A-Za-z0-9]{1,10}" />
-            <label htmlFor="room">Room Number</label>
-            <input type="tel" id="room" className="input" onChange={(event) => setRoom(event.target.value)} placeholder="4200" required="required" pattern="[0-9]{1,4}" />
+    <section className="flex flex-col text-white w-full min-h-screen justify-center items-center">
+      <UserCard name={name} user={user} logout={logout} />
+      <div id="content" className="flex items-center">
+        <div className="bg-black bg-opacity-40 rounded-lg px-6 pb-6">
+          <p className="text-2xl font-bold py-3">Select a room to enter</p>
+          <div className="grid  grid-cols-2 md:grid-cols-3 max-w-lg gap-3">
+            {
+              [...Array(9).keys()].map(n => <RoomCard fn={() => joinRoom(n+1)} room={n+1} key={n}/>)
+            }
           </div>
-          <input type="submit" className="joinRoomButton" value="Join" />
-        </form>
+        </div>
       </div>
-    </>
+  </section>
   );
 
   return (
