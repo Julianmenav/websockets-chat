@@ -9,6 +9,8 @@
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   background: linear-gradient(35deg, rgba(69,218,109,1) 0%, rgba(62,195,226,1) 100%);
   background-repeat: repeat;
@@ -170,6 +172,7 @@ label {
 
 span {
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 #separationLine {
