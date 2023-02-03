@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useSearchParams } from "react-router-dom";
 import { io } from "socket.io-client";
-import ChatInput from "./ChatInput";
-import ChatLog from "./ChatLog";
+import ChatInput from "../../components/ChatInput";
+import ChatLog from "../../components/ChatLog";
+import UserCard from "../../components/UserCard";
 
 const serverURL = import.meta.env.VITE_SERVER_URL;
 const socket = io.connect(serverURL);
@@ -57,17 +58,15 @@ const Chat = () => {
   const handleOnChange = (event) => setMessage(event.target.value);
 
   return (
-    <div className="chat">
-      <div className="roomNumber">{`Room: ${room}`}</div>
-      <ChatLog messageList={messageList} id={socket.id} />
-      <div id="separationLine"></div>
-      <ChatInput
-        message={message}
-        handleKeyDown={handleKeyDown}
-        handleOnChange={handleOnChange}
-        sendMessage={sendMessage}
-      />
-    </div>
+    <>
+      <UserCard name={name} />
+      <div className="chat">
+        <div className="roomNumber">{`Room: ${room}`}</div>
+        <ChatLog messageList={messageList} id={socket.id} />
+        <div id="separationLine"></div>
+        <ChatInput message={message} handleKeyDown={handleKeyDown} handleOnChange={handleOnChange} sendMessage={sendMessage} />
+      </div>
+    </>
   );
 };
 

@@ -9,102 +9,11 @@
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   background: linear-gradient(35deg, rgba(69,218,109,1) 0%, rgba(62,195,226,1) 100%);
   background-repeat: repeat;
-}
-
-.roomFormComponent{
-  background-color: rgba(25, 26, 27, 0.986); 
-  margin: auto;
-  width: 22em;
-  height: 23em;
-  color: #fff;
-  border-radius: 9px;
-  box-shadow: 2px 2px 3px 1px #000;
-  display: flex;
-  flex-direction: column;
-}
-
-.roomFormHeader {
-  height: 33%;
-  display: grid;
-  place-content: center;
-}
-
-.roomFormHeader > p {
-  font-size: 2.4em;
-  font-weight:  700;
-
-}
-
-.roomFormHeader img {
-  width: 40px;
-  margin-left: 6px;
-  transform: translatey(25%);
-}
-
-.roomForm {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-#inputs {
-  display: flex;
-  width: 70%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  margin: 0 auto;
-}
-
-label {
-  font-size: 0.8em;
-}
-
-.input{
-  font-size: 1.9em;
-  font-family: monospace;
-  margin-bottom: 20px;
-  padding: 8px 13px;
-  border-radius: 3px;
-  border: none;
-  background-color: rgba(187, 187, 187, 0.151);
-  color: #00e200;
-  font-weight: bold;
-}
-
-.input::placeholder {
-  opacity: 0.6;
-}
-
-#inputs > * {
-  width: 100%;
-}
-
-.joinRoomButton {
-  margin-top: 0.4em;
-  font-size: 1.5em;
-  margin: 0 auto;
-  margin-top: 0.4em;
-  border: none;
-  padding: 6px 25px;
-  border-radius: 3px;
-  font-weight: bold;
-  background-color: #11b811;
-  color: #fff;
-  box-shadow: 0 5px #078f07;
-}
-
-.joinRoomButton:hover {
-  background-color: #03E304;
-}
-
-.joinRoomButton:active {
-  transform: translatey(2px);
-  box-shadow: 0 3px #078f07;
 }
 
 .roomNumber{
@@ -148,7 +57,7 @@ label {
 
 .messageAuthor > span{
   font-size: 0.5em;
-  color: rgb(39, 39, 39);
+  color: #FFF;
 }
 
 .messageContent {
@@ -170,6 +79,7 @@ label {
 
 span {
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 #separationLine {
