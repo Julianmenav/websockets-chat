@@ -77,9 +77,8 @@
   text-align: center;
 }
 
-span {
+.messageContent span {
   overflow-wrap: break-word;
-  display: inline-block;
 }
 
 #separationLine {
