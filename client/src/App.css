@@ -8,6 +8,7 @@
 .App {
   width: 100vw;
   height: 100vh;
+  padding: 0 4px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +26,8 @@
 
 .chat {
   margin: auto;
-  width: 26em;
+  width: 100%;
+  max-width: 40em;
   height: 30em;
   background-color: rgb(25, 26, 27); 
   display: flex;
@@ -101,8 +103,6 @@
 
 .inputMessage {
   flex-grow: 1;
-  margin-left: 10px;
-  margin-right: 10px;
   border: none;
   background-color: transparent;
   color: white;
